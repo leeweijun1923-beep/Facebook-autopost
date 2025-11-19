@@ -6,7 +6,7 @@ import time
 import pyautogui
 import keyboard
 
-Post_To_Share = input("Link to post: ")
+Post_To_Share = "https://www.facebook.com/share/p/16bQW5zGHL/?mibextid=wwXIfr"
 Amount_Of_Groups = 10
 
 driver = webdriver.Chrome()
@@ -121,4 +121,5 @@ main()
 
 time.sleep(10000)
 driver.quit()
+
 
