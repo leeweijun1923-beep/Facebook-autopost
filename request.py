@@ -17,14 +17,17 @@ saved_position_Post = None
 
 def clickGroup():
     pyautogui.moveTo(saved_position_Group[0], saved_position_Group[1], duration=0.5)
+    time.sleep(2)
     pyautogui.click()
 
 def clickShare():
     pyautogui.moveTo(saved_position_Share[0], saved_position_Share[1], duration=0.5)
+    time.sleep(2)
     pyautogui.click()
 
 def clickPost():
     pyautogui.moveTo(saved_position_Post[0], saved_position_Post[1], duration=0.5)
+    time.sleep(2)
     pyautogui.click()
 
 def main():
@@ -59,7 +62,7 @@ def main():
         os.system('cls')
 
         if saved_position_Group is None:
-            print("Move your cursor to the 'Group Button' and press 'X' to complete setup")
+            print("Move your cursor to the 'Group' Button and press 'X' to complete setup")
 
         while saved_position_Group is None:
             if keyboard.is_pressed('x'):
@@ -123,6 +126,7 @@ while True:
 
 time.sleep(10000)
 driver.quit()
+
 
 
 
