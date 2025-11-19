@@ -7,7 +7,7 @@ import pyautogui
 import keyboard
 
 Post_To_Share = "https://www.facebook.com/share/p/16bQW5zGHL/?mibextid=wwXIfr"
-Amount_Of_Groups = 10
+Amount_Of_Groups = 45
 
 driver = webdriver.Chrome()
 
@@ -29,6 +29,10 @@ def clickPost():
     pyautogui.moveTo(saved_position_Post[0], saved_position_Post[1], duration=0.5)
     time.sleep(2)
     pyautogui.click()
+
+def clsProgress(a):
+    os.system('cls')
+    print(f"Progress: {a}/{Amount_Of_Groups} Groups.")
 
 def main():
     global saved_position_Share
@@ -59,7 +63,7 @@ def main():
 
         clickShare()
         time.sleep(5)
-        os.system('cls')
+        clsProgress(amount)
 
         if saved_position_Group is None:
             print("Move your cursor to the 'Group' Button and press 'X' to complete setup")
@@ -114,19 +118,13 @@ def main():
 
 os.system('cls')
 driver.get("https://www.facebook.com")
-os.system('cls')
 
 input("Press enter after logging in.")
 pyautogui.hotkey('alt', 'tab')
 
 os.system('cls')
-
 while True:
     main()
 
 time.sleep(10000)
 driver.quit()
-
-
-
-
