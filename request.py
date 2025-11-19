@@ -41,7 +41,7 @@ def main():
         time.sleep(3)
 
         driver.get(Post_To_Share)
-        time.sleep(3)
+        time.sleep(5)
 
         if saved_position_Share is None:
             print("Move your cursor to the 'Share' Button and press 'X' to complete setup")
@@ -55,7 +55,7 @@ def main():
                     saved_position_Share = None
 
         clickShare()
-        time.sleep(3)
+        time.sleep(5)
         os.system('cls')
 
         if saved_position_Group is None:
@@ -75,7 +75,7 @@ def main():
                     saved_position_Group = None
 
         clickGroup()
-        time.sleep(3)
+        time.sleep(5)
 
         for i in range(1, 4):
             time.sleep(0.1)
@@ -89,7 +89,7 @@ def main():
 
         time.sleep(1)
         pyautogui.keyDown('enter')
-        time.sleep(3)
+        time.sleep(10)
 
         if saved_position_Post is None:
             print("Move your cursor to the 'Post' Button and press 'X' to complete setup")
@@ -107,7 +107,7 @@ def main():
         time.sleep(1)
         pyautogui.keyDown('enter')
         print("Shared Successfully!")
-        time.sleep(5)
+        time.sleep(10)
 
 os.system('cls')
 driver.get("https://www.facebook.com")
@@ -121,3 +121,4 @@ main()
 
 time.sleep(10000)
 driver.quit()
+
