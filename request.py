@@ -117,9 +117,12 @@ input("Press enter after logging in.")
 pyautogui.hotkey('alt', 'tab')
 
 os.system('cls')
-main()
+
+while True:
+    main()
 
 time.sleep(10000)
 driver.quit()
+
 
 
